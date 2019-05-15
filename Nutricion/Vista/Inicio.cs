@@ -49,5 +49,27 @@ namespace Vista
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        //Metodo para abrir formulario dentro del panel
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
+            MiForm formulario;
+            formulario = panelCentro.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                panelCentro.Controls.Add(formulario);
+                panelCentro.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else {
+                formulario.BringToFront();
+            }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Registro>();
+        }
     }
 }
