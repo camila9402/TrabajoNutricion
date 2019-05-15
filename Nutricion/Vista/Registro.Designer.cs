@@ -50,10 +50,10 @@
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 28;
-            this.lineShape1.X2 = 107;
-            this.lineShape1.Y1 = 92;
-            this.lineShape1.Y2 = 92;
+            this.lineShape1.X1 = 27;
+            this.lineShape1.X2 = 106;
+            this.lineShape1.Y1 = 97;
+            this.lineShape1.Y2 = 97;
             // 
             // shapeContainer1
             // 
