@@ -55,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseMove);
             // 
             // pictureBox3
             // 
@@ -151,6 +152,7 @@
             this.btnAcceder.TabIndex = 5;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.BtnAcceder_Click);
             // 
             // btnCerrar
             // 
@@ -193,6 +195,7 @@
             this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
