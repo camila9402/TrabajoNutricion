@@ -12,8 +12,9 @@ namespace Modelo
     {
 
         public SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-3PQ4FGV\\SQLEXPRESS;Initial Catalog=Nutricion;Integrated Security=True");
+        public SqlCommand cmd = new SqlCommand();
 
-         public void abrirConexion()  {
+        public void abrirConexion()  {
              conexion.Open();
          }
          public void cerrarConexion() {
