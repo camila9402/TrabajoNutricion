@@ -10,13 +10,15 @@ namespace Modelo
 {
     public class Conexion
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-3PQ4FGV\SQLEXPRESS;Initial Catalog=Nutricion;Integrated Security=True");
-  
-        public void abrirConexion()  {
-            this.conexion.Open();
-        }
-        public void cerrarConexion() {
-            this.conexion.Close();
-        }
-    }
+
+        public SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-3PQ4FGV\\SQLEXPRESS;Initial Catalog=Nutricion;Integrated Security=True");
+
+         public void abrirConexion()  {
+             conexion.Open();
+         }
+         public void cerrarConexion() {
+             conexion.Close();
+         }
+     }
+    
 }

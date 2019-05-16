@@ -194,6 +194,7 @@
             this.btnAcceder.TabIndex = 11;
             this.btnAcceder.Text = "GUARDAR";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.BtnAcceder_Click);
             // 
             // cbbEstadoCivil
             // 
