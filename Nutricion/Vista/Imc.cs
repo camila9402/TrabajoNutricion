@@ -25,7 +25,35 @@ namespace Vista
 
         private void BtnAcceder_Click(object sender, EventArgs e)
         {
-            ImcControl c = new ImcControl(Convert.ToDouble(txtPeso.Text.Trim()), Convert.ToDouble(txtEstatura.Text.Trim()));
+            if (txtPeso.Text != "")
+            {
+
+                if (txtEstatura.Text != "")
+                {
+                    try
+                    {
+                        ImcControl c = new ImcControl(Convert.ToDouble(txtPeso.Text.Trim()), Convert.ToDouble(txtEstatura.Text.Trim()));
+                        MessageBox.Show("IMC de "+c.Resultado+"y el paciente esta en una condición de "+c.Imc,"Imc",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                    }
+                    catch (Exception ) {
+                        mensajeError("Datos invalidos");
+                    }
+                }
+                else {
+                    mensajeError("Campo de estatura vacio");
+                }
+            }
+            else {
+                mensajeError("Campo de peso vacio");
+            }
+
+            
+        }
+        void mensajeError(string mensaje)
+        {
+            lblerror.Text = "          " + mensaje;
+            lblerror.Visible = true;
+
         }
     }
 }

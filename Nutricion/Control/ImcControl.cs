@@ -9,51 +9,56 @@ namespace Control
 {
     public class ImcControl
     {
+        private string imc;
+        private double resultado;
+
+        public string Imc { get => imc; set => imc = value; }
+        public double Resultado { get => resultado; set => resultado = value; }
+
         public ImcControl(double peso,double estarura) {
-            string imc = "";
-            double resultado;
-            resultado = peso / Math.Pow(estarura,2);
-            Console.Write(resultado);
-            if (resultado < 16.00)
+            Imc = "";
+            Resultado = peso / Math.Pow(estarura,2);
+            Console.Write(Resultado);
+            if (Resultado < 16.00)
             {
-                imc = "delgadez severa";
+                Imc = "delgadez severa";
             }
             else {
-                if (resultado <= 16.99)
+                if (Resultado <= 16.99)
                 {
-                    imc = "delgadez moderada";
+                    Imc = "delgadez moderada";
                 }
                 else {
-                    if (resultado <= 18.49)
+                    if (Resultado <= 18.49)
                     {
-                        imc = "delgadez aceptable";
+                        Imc = "delgadez aceptable";
                     }
                     else {
-                        if (resultado <= 24.99)
+                        if (Resultado <= 24.99)
                         {
-                            imc = "Peso normal";
+                            Imc = "Peso normal";
                         }
                         else{
-                            if (resultado <= 29.99)
+                            if (Resultado <= 29.99)
                             {
-                                imc = "Sobrepeso";
+                                Imc = "Sobrepeso";
 
                             }
 
                             else{
-                                if (resultado <= 34.99)
+                                if (Resultado <= 34.99)
                                 {
-                                    imc = "Obeso tipo I";
+                                    Imc = "Obeso tipo I";
                                 }
                                 else{
 
-                                    if (resultado <= 40.00)
+                                    if (Resultado <= 40.00)
                                     {
-                                        imc = "Obeso tipo II";
+                                        Imc = "Obeso tipo II";
 
                                     }
                                     else {
-                                        imc = "Obeso tipo III";
+                                        Imc = "Obeso tipo III";
                                     }
                                 }
                             }
@@ -62,7 +67,7 @@ namespace Control
                 }
             }
             DaoImcimp dao = new DaoImcimp();
-            dao.Registrar(imc);
+            dao.Registrar(Imc);
 
         }
     }

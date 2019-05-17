@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblerror = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +106,7 @@
             this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAcceder.Location = new System.Drawing.Point(230, 428);
+            this.btnAcceder.Location = new System.Drawing.Point(228, 440);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(410, 40);
             this.btnAcceder.TabIndex = 6;
@@ -129,6 +130,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // lblerror
+            // 
+            this.lblerror.AutoSize = true;
+            this.lblerror.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblerror.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblerror.Image = ((System.Drawing.Image)(resources.GetObject("lblerror.Image")));
+            this.lblerror.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblerror.Location = new System.Drawing.Point(357, 420);
+            this.lblerror.Name = "lblerror";
+            this.lblerror.Size = new System.Drawing.Size(59, 17);
+            this.lblerror.TabIndex = 9;
+            this.lblerror.Text = "            Error";
+            this.lblerror.Visible = false;
+            // 
             // Imc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +151,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(947, 501);
+            this.Controls.Add(this.lblerror);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.label3);
@@ -163,5 +179,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblerror;
     }
 }
