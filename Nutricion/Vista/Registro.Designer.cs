@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -72,7 +73,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,9 +108,14 @@
             // 
             // cbbIdentificacion
             // 
+            this.cbbIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbIdentificacion.FormattingEnabled = true;
             this.cbbIdentificacion.Items.AddRange(new object[] {
-            "Cedula"});
+            "Cedula",
+            "Tarjeta de Identidad",
+            "Cedula Extranjeria",
+            "Pasaporte",
+            "Registro Civil"});
             this.cbbIdentificacion.Location = new System.Drawing.Point(231, 92);
             this.cbbIdentificacion.Name = "cbbIdentificacion";
             this.cbbIdentificacion.Size = new System.Drawing.Size(121, 21);
@@ -122,9 +130,15 @@
             // 
             // cbbpais
             // 
+            this.cbbpais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbpais.FormattingEnabled = true;
             this.cbbpais.Items.AddRange(new object[] {
-            "Colombia"});
+            "Afganistán",
+            "Albania",
+            "Alemania",
+            "Andorra",
+            "Colombia",
+            "Venezuela"});
             this.cbbpais.Location = new System.Drawing.Point(231, 145);
             this.cbbpais.Name = "cbbpais";
             this.cbbpais.Size = new System.Drawing.Size(121, 21);
@@ -136,6 +150,7 @@
             this.txtPermanencia.Name = "txtPermanencia";
             this.txtPermanencia.Size = new System.Drawing.Size(121, 20);
             this.txtPermanencia.TabIndex = 6;
+            this.txtPermanencia.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPermanencia_Validating);
             // 
             // dateFecha
             // 
@@ -198,9 +213,13 @@
             // 
             // cbbEstadoCivil
             // 
+            this.cbbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbEstadoCivil.FormattingEnabled = true;
             this.cbbEstadoCivil.Items.AddRange(new object[] {
-            "Soltero"});
+            "Soltero",
+            "Casado",
+            "Divorciado",
+            "Union Libre"});
             this.cbbEstadoCivil.Location = new System.Drawing.Point(231, 258);
             this.cbbEstadoCivil.Name = "cbbEstadoCivil";
             this.cbbEstadoCivil.Size = new System.Drawing.Size(121, 21);
@@ -212,6 +231,7 @@
             this.txtHijos.Name = "txtHijos";
             this.txtHijos.Size = new System.Drawing.Size(121, 20);
             this.txtHijos.TabIndex = 13;
+            this.txtHijos.Validating += new System.ComponentModel.CancelEventHandler(this.TxtHijos_Validating);
             // 
             // txtDireccion
             // 
@@ -245,7 +265,12 @@
             // 
             this.cbbEps.FormattingEnabled = true;
             this.cbbEps.Items.AddRange(new object[] {
-            "Sura"});
+            "Sura",
+            "Alians",
+            "Sanitas",
+            "Compesar",
+            "Nueva Eps",
+            "Cruz Blanca"});
             this.cbbEps.Location = new System.Drawing.Point(523, 145);
             this.cbbEps.Name = "cbbEps";
             this.cbbEps.Size = new System.Drawing.Size(121, 21);
@@ -253,9 +278,11 @@
             // 
             // cbbRegimen
             // 
+            this.cbbRegimen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbRegimen.FormattingEnabled = true;
             this.cbbRegimen.Items.AddRange(new object[] {
-            "Sunsidiado"});
+            "Subsidiado",
+            "Contributivo"});
             this.cbbRegimen.Location = new System.Drawing.Point(523, 172);
             this.cbbRegimen.Name = "cbbRegimen";
             this.cbbRegimen.Size = new System.Drawing.Size(121, 21);
@@ -429,9 +456,12 @@
             // 
             // cbbEscolaridad
             // 
+            this.cbbEscolaridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbEscolaridad.FormattingEnabled = true;
             this.cbbEscolaridad.Items.AddRange(new object[] {
-            "primaria"});
+            "Primaria",
+            "Secundaria",
+            "Profesional"});
             this.cbbEscolaridad.Location = new System.Drawing.Point(523, 118);
             this.cbbEscolaridad.Name = "cbbEscolaridad";
             this.cbbEscolaridad.Size = new System.Drawing.Size(121, 21);
@@ -510,6 +540,10 @@
             this.label20.TabIndex = 44;
             this.label20.Text = "Antecedentes Médicos ";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +598,7 @@
             this.Opacity = 0.9D;
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,5 +649,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
