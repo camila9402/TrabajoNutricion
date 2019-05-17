@@ -1,3 +1,5 @@
 Aca esta la base de datos en sql y en bank
 escojer la que mas convenga
 usuario para la interfaz admin:admin
+La base de datos fue creada en Sql Server 2017
+Y la version de visual fue 2019
