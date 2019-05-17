@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace Modelo
     interface DaoImc
     {
         void Registrar(String imc);
-        List<String> listar();
+        ArrayList  listar();
     }
 }

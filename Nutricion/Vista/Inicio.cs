@@ -76,5 +76,10 @@ namespace Vista
         {
             AbrirFormulario<Imc>();
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Reporte>();
+        }
     }
 }
