@@ -27,5 +27,10 @@ namespace Vista
             cantidad = c.datoimc();
             chartImc.Series[0].Points.DataBindXY(imc, cantidad);
         }
+
+        private void BtnAcceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.lblerror = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -141,12 +142,28 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
+            // lblerror
+            // 
+            this.lblerror.AutoSize = true;
+            this.lblerror.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblerror.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblerror.Image = ((System.Drawing.Image)(resources.GetObject("lblerror.Image")));
+            this.lblerror.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblerror.Location = new System.Drawing.Point(328, 201);
+            this.lblerror.Name = "lblerror";
+            this.lblerror.Size = new System.Drawing.Size(59, 17);
+            this.lblerror.TabIndex = 8;
+            this.lblerror.Text = "            Error";
+            this.lblerror.Visible = false;
+            this.lblerror.Click += new System.EventHandler(this.Lblerror_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lblerror);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAcceder);
@@ -180,6 +197,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Label lblerror;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Control;
 
 namespace Vista
 {
@@ -88,10 +89,39 @@ namespace Vista
 
         private void BtnAcceder_Click(object sender, EventArgs e)
         {
-            Inicio i = new Inicio();
-            this.Hide();
-            i.Show();
-            //Form ingreso = new Ingreso();
+            if (txtUsuario.Text != "USUARIO")
+            {
+                if (txtContraseña.Text != "CONTRASEÑA")
+                {
+                    ValidarLoginControl c = new ValidarLoginControl();
+                    if (c.validarLogin(txtUsuario.Text, txtContraseña.Text))
+                    {
+                        Inicio i = new Inicio();
+                        this.Hide();
+                        i.Show();
+                    }
+                    else {
+                        mensajeError("Usuario y contraseña invalidos");
+                    }
+                }
+                else {
+                    mensajeError("ingrese una contraseña al campo");
+                }
+            }
+            else {
+                mensajeError("ingrese un usuario al campo");
+            }
+           
+            
+        }
+        void mensajeError(string mensaje) {
+            lblerror.Text = "          " + mensaje;
+            lblerror.Visible = true;
+
+        }
+        private void Lblerror_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
