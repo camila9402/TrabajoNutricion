@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DaoImcimp.cs" />
     <Compile Include="DaoPersona.cs" />
     <Compile Include="DaoPersonaimp.cs" />
+    <Compile Include="DaoImc.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
